@@ -1,0 +1,88 @@
+
+  <div class="content-box" >
+    <h2>#i18n{fileexport.manage_fileexport.tableLabel}</h2>    
+    <table>
+        <tr>
+ 			  
+                   	   <input type="hidden" id="fileexport_id_export" name="fileexport_id_export"  />
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnDesc}</th>
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnPool_name}</th>
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnSql_query}</th>
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnFile_sql_field}</th>
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnDirectory_field}</th>
+ 			
+ 			<th>#i18n{fileexport.manage_fileexport.columnFilename_index}</th>
+		<th>#i18n{fileexport.manage_fileexport.columnAction}</th>
+        </tr>
+        <#list fileexport_list as fileexport >
+         <tr>
+   
+             
+             
+                   	   <input type="hidden" id="fileexport_id_export" name="fileexport_id_export"  />
+             
+             
+ 			 
+             
+              <td><a href="jsp/admin/plugins/fileexport/ModifyFileExport.jsp?fileexport_id_export=${fileexport.idExport}" class="bullet-link">
+                 ${fileexport.desc}
+                </a>
+                </td>
+             
+  		 
+             
+                <td>${fileexport.poolName}</td>
+             
+             
+ 			 
+             
+                <td>${fileexport.sqlQuery}</td>
+             
+             
+ 			 
+             
+                <td>${fileexport.fileSqlField}</td>
+             
+             
+ 			 
+             
+                <td>${fileexport.directoryField}</td>
+             
+             
+ 			 
+             
+                <td>${fileexport.filenameIndex}</td>
+             
+             
+ 			 
+             <td>
+                <a href="jsp/admin/plugins/fileexport/RemoveFileExport.jsp?fileexport_id_export=${fileexport.idExport}" >
+                    <img src="images/admin/skin/actions/delete.png" alt="#i18n{portal.util.labelDelete}" title="#i18n{portal.util.labelDelete}" />
+                </a>
+             </td>
+                        <td>
+                        
+
+                <a href="jsp/admin/plugins/fileexport/ZipExport.jsp?name=${fileexport.desc}&sql=${fileexport.sqlQuery}&pool=${fileexport.poolName}&directory=${fileexport.directoryField}&blobfield=${fileexport.fileSqlField}&fileindex=${fileexport.filenameIndex}" >
+                    <img src="images/admin/skin/zip.png" alt="#i18n{portal.util.labelDelete}" title="#i18n{portal.util.labelDelete}" />
+                </a>
+             </td>
+        </tr>
+        </#list>
+    </table>
+
+    <form method="post"  action="jsp/admin/plugins/fileexport/CreateFileExport.jsp">
+        <input type="submit" value="#i18n{fileexport.manage_fileexport.buttonAddFileExport}" class="button" />
+    </form>
+
+</div>
+
+
+  
+
+

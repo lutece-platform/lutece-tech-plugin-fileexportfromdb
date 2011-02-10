@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<plug-in>
+    <name>fileexport</name>
+    <class>fr.paris.lutece.portal.service.plugin.PluginDefaultImplementation</class>
+    <version>3.0</version>
+    <documentation></documentation>
+    <installation></installation>
+    <changes></changes>
+    <user-guide></user-guide>
+    <description>fileexport.plugin.description</description>
+    <provider>fileexport.plugin.provider</provider>
+    <provider-url>http://your.web.site.com</provider-url>
+    <icon-url>images/admin/skin/plugins/fileexport/fileexport.png</icon-url>
+    <copyright></copyright>
+    <db-pool-required>1</db-pool-required>
+    
+    <!-- Admin features parameters -->
+    <admin-features>
+        <admin-feature>
+            <feature-id>FILEEXPORT_MANAGEMENT</feature-id>
+            <feature-title>fileexport.adminFeature.fileexport_management.name</feature-title>
+            <feature-description>fileexport.adminFeature.fileexport_management.description</feature-description>
+            <feature-level>0</feature-level>
+            <feature-url>jsp/admin/plugins/fileexport/ManageFileExports.jsp</feature-url>
+            <feature-icon-url></feature-icon-url>
+      </admin-feature>
+    </admin-features>    
+  	<!-- XPages parameters -->
+    <applications>
+    </applications>
+	<!-- Portlet parameters -->
+    <portlets>
+   </portlets>
+</plug-in>
+

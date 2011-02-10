@@ -1,0 +1,53 @@
+
+<div class="content-box">
+       
+    <form method="post"  name="modify_fileexport" action="jsp/admin/plugins/fileexport/DoModifyFileExport.jsp">
+        <h2>#i18n{fileexport.modify_fileexport.tableLabel}</h2>
+        
+
+        <p>
+             	  
+                   	   <input type="hidden" id="fileexport_id_export" name="fileexport_id_export" value="${fileexport.idExport}"/>
+ 			
+             <div>
+            <label for="fileexport_desc" >#i18n{fileexport.modify_fileexport.rowTitleDesc} * :</label>
+            <input type="text" id="fileexport_desc" name="fileexport_desc" size="60" maxlength="50" value="${fileexport.desc}" tabindex="1" />
+            </div>
+ 			
+             <div>
+            <label for="fileexport_pool_name" >#i18n{fileexport.modify_fileexport.rowTitlePool_name} * :</label>
+            <input type="text" id="fileexport_pool_name" name="fileexport_pool_name" size="60" maxlength="50" value="${fileexport.poolName}" tabindex="1" />
+            </div>
+ 			
+             <div>
+            <label for="fileexport_sql_query" >#i18n{fileexport.modify_fileexport.rowTitleSql_query} * :</label>
+            <input type="text" id="fileexport_sql_query" name="fileexport_sql_query" size="60" maxlength="50" value="${fileexport.sqlQuery}" tabindex="1" />
+            </div>
+ 			
+             <div>
+            <label for="fileexport_file_sql_field" >#i18n{fileexport.modify_fileexport.rowTitleFile_sql_field} * :</label>
+            <input type="text" id="fileexport_file_sql_field" name="fileexport_file_sql_field" size="60" maxlength="50" value="${fileexport.fileSqlField}" tabindex="1" />
+            </div>
+ 			
+             <div>
+            <label for="fileexport_directory_field" >#i18n{fileexport.modify_fileexport.rowTitleDirectory_field} * :</label>
+            <input type="text" id="fileexport_directory_field" name="fileexport_directory_field" size="60" maxlength="50" value="${fileexport.directoryField}" tabindex="1" />
+            </div>
+ 			
+             <div>
+            <label for="fileexport_filename_index" >#i18n{fileexport.modify_fileexport.rowTitleFilename_index} * :</label>
+            <input type="text" id="fileexport_filename_index" name="fileexport_filename_index" size="60" maxlength="50" value="${fileexport.filenameIndex}" tabindex="1" />
+            </div>
+        </p>
+        <p>   
+            <input type="submit" value="#i18n{fileexport.modify_fileexport.buttonModifyFileExport}" class="button" tabindex="3" />
+            <input class="button" type="button" onclick="javascript:history.go(-1)" value="Cancel" />	
+        </p>
+        
+    </form>
+      
+  
+    
+</div>
+
+
