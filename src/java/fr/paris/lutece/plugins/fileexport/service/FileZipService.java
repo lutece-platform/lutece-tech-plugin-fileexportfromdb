@@ -35,7 +35,6 @@
  */
 package fr.paris.lutece.plugins.fileexport.service;
 
-;
 import fr.paris.lutece.portal.service.plugin.Plugin;
 import fr.paris.lutece.portal.service.plugin.PluginService;
 import fr.paris.lutece.portal.service.util.AppLogService;
