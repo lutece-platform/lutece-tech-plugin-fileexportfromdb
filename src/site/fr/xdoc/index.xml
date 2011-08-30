@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document>
 	<properties>
-		<title>Plugin</title>
+		<title>Plugin fileexportfromdb</title>
 	</properties>
 	<body>
-		<section name="Plugin">
+		<section name="Plugin fileexportfromdb">
 			<subsection name="Introduction">
+			Plugin fileexportfromdb
 			</subsection>
 		</section>
 	</body>
