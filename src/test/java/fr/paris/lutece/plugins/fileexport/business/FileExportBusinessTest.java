@@ -34,11 +34,9 @@
 
 package fr.paris.lutece.plugins.fileexport.business;
 
-import fr.paris.lutece.test.LuteceTestCase;
-import fr.paris.lutece.plugins.fileexport.business.FileExport;
-import fr.paris.lutece.plugins.fileexport.business.FileExportHome;
-import fr.paris.lutece.portal.service.plugin.PluginService;
 import fr.paris.lutece.portal.service.plugin.Plugin;
+import fr.paris.lutece.portal.service.plugin.PluginService;
+import fr.paris.lutece.test.LuteceTestCase;
 
 public class FileExportBusinessTest extends LuteceTestCase
 {
@@ -60,12 +58,12 @@ public class FileExportBusinessTest extends LuteceTestCase
     public void testBusiness(  )
     {
         Plugin plugin = PluginService.getPlugin( "fileexport" );
-        
+
         // Initialize an object
         FileExport fileExport = new FileExport();
         fileExport.setIdExport( IDEXPORT1 );
         fileExport.setDesc( DESC1 );
-        fileExport.setPoolName( POOLNAME1 );
+        fileExport.setPoolName( Integer.toString( POOLNAME1 ) );
         fileExport.setSqlQuery( SQLQUERY1 );
         fileExport.setFileSqlField( FILESQLFIELD1 );
         fileExport.setDirectoryField( DIRECTORYFIELD1 );
@@ -85,7 +83,7 @@ public class FileExportBusinessTest extends LuteceTestCase
         // Update test
         fileExport.setIdExport( IDEXPORT2 );
         fileExport.setDesc( DESC2 );
-        fileExport.setPoolName( POOLNAME2 );
+        fileExport.setPoolName( Integer.toString( POOLNAME2 ) );
         fileExport.setSqlQuery( SQLQUERY2 );
         fileExport.setFileSqlField( FILESQLFIELD2 );
         fileExport.setDirectoryField( DIRECTORYFIELD2 );
@@ -107,7 +105,7 @@ public class FileExportBusinessTest extends LuteceTestCase
         FileExportHome.remove( fileExport.getIdExport() , plugin );
         fileExportStored = FileExportHome.findByPrimaryKey( fileExport.getIdExport() , plugin );
         assertNull( fileExportStored );
-        
+
     }
 
 }
