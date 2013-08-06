@@ -1,44 +1,55 @@
-<div class="content-box" >
-    
-    <h2>#i18n{fileexport.create_fileexport.tableLabel}</h2>
-    
-    <form method="post"  name="create_fileexport" id="create_fileexport" action="jsp/admin/plugins/fileexport/DoCreateFileExport.jsp">
-      
-         <p>
-            
-                   	   <input type="hidden" id="fileexport_id_export" name="fileexport_id_export"  />
-            <div>
-            <label for="fileexport_desc" >#i18n{fileexport.create_fileexport.rowTitleDesc} * :</label>
-            <input type="text" id="fileexport_desc" name="fileexport_desc" size="60" maxlength="50" tabindex="1" />
-            </div>
-            <div>
-            <label for="fileexport_poolName" >#i18n{fileexport.create_fileexport.rowTitlePool_name} * :</label>
-            <input type="text" id="fileexport_pool_name" name="fileexport_pool_name" size="60" maxlength="50" tabindex="1" />
-            </div>
-            <div>
-            <label for="fileexport_sqlQuery" >#i18n{fileexport.create_fileexport.rowTitleSql_query} * :</label>
-            <input type="text" id="fileexport_sql_query" name="fileexport_sql_query" size="60" maxlength="255" tabindex="1" />
-            </div>
-            <div>
-            <label for="fileexport_fileSqlField" >#i18n{fileexport.create_fileexport.rowTitleFile_sql_field} * :</label>
-            <input type="text" id="fileexport_file_sql_field" name="fileexport_file_sql_field" size="60" maxlength="50" tabindex="1" />
-            </div>
-            <div>
-            <label for="fileexport_directoryField" >#i18n{fileexport.create_fileexport.rowTitleDirectory_field} * :</label>
-            <input type="text" id="fileexport_directory_field" name="fileexport_directory_field" size="60" maxlength="50" tabindex="1" />
-            </div>
-            <div>
-            <label for="fileexport_filenameIndex" >#i18n{fileexport.create_fileexport.rowTitleFilename_index} * :</label>
-            <input type="text" id="fileexport_filename_index" name="fileexport_filename_index" size="60" maxlength="50" tabindex="1" />
-            </div>
-        </p>
-        <p>   
-        	<input type="submit" value="#i18n{fileexport.create_fileexport.buttonValidate}" class="button" tabindex="3" />
-        </p>
-        
-    </form>
- 
-    
+<div class="row-fluid">
+	<div class="span12">
+		<form class="form-horizontal" method="post"  name="create_fileexport" id="create_fileexport" action="jsp/admin/plugins/fileexport/DoCreateFileExport.jsp">
+		<input type="hidden" id="fileexport_id_export" name="fileexport_id_export"  />
+		<fieldset>
+			<legend>#i18n{fileexport.create_fileexport.tableLabel}</legend>
+			<div class="control-group">
+			<label class="control-label" for="fileexport_desc" >#i18n{fileexport.create_fileexport.rowTitleDesc} *</label>
+				<div class="controls">
+					<input type="text" id="fileexport_desc" name="fileexport_desc" class="input-large" maxlength="50" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="fileexport_poolName" >#i18n{fileexport.create_fileexport.rowTitlePool_name} *</label>
+				<div class="controls">
+					<input type="text" id="fileexport_pool_name" name="fileexport_pool_name" class="input-large" maxlength="50" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="fileexport_sqlQuery" >#i18n{fileexport.create_fileexport.rowTitleSql_query} *</label>
+				<div class="controls">
+					<input type="text" id="fileexport_sql_query" name="fileexport_sql_query" class="input-large" maxlength="255" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="fileexport_fileSqlField" >#i18n{fileexport.create_fileexport.rowTitleFile_sql_field} * :</label>
+				<div class="controls">
+					<input type="text" id="fileexport_file_sql_field" name="fileexport_file_sql_field" class="input-large" maxlength="50" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+			<label class="control-label" for="fileexport_directoryField" >#i18n{fileexport.create_fileexport.rowTitleDirectory_field} * </label>
+				<div class="controls">
+					<input type="text" id="fileexport_directory_field" name="fileexport_directory_field" class="input-large" maxlength="50" tabindex="1" />
+				</div>
+			</div>
+			<div class="control-group">
+				<label class="control-label" for="fileexport_filenameIndex" >#i18n{fileexport.create_fileexport.rowTitleFilename_index} * :</label>
+				<div class="controls">
+					<input type="text" id="fileexport_filename_index" name="fileexport_filename_index" class="input-large" maxlength="50" tabindex="1" />
+				</div>
+			</div>
+			<div class="form-actions">
+				<button class="btn btn-primary btn-small" type="submit" >
+					<i class="icon-ok icon-white"></i>&nbsp;#i18n{fileexport.create_fileexport.buttonValidate}</button>
+				<a class="btn btn-small" href="jsp/admin/plugins/fileexport/ManageFileExports.jsp" title="#i18n{portal.admin.message.buttonCancel}">
+						<i class="icon-remove-circle"></i>&nbsp;#i18n{portal.admin.message.buttonCancel}
+				</a>
+			</div>	
+		</fieldset>
+		</form>
+	</div>
 </div>
 
 
